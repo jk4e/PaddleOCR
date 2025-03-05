@@ -43,7 +43,7 @@ from .distillation_loss import DistillationVQADistanceLoss
 class CombinedLoss(nn.Layer):
     """
     CombinedLoss:
-        a combionation of loss function
+        a combination of loss function
     """
 
     def __init__(self, loss_config_list=None):

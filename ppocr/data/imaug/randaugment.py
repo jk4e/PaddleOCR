@@ -104,9 +104,9 @@ class RawRandAugment(object):
         }
 
     def __call__(self, img):
-        avaiable_op_names = list(self.level_map.keys())
+        available_op_names = list(self.level_map.keys())
         for layer_num in range(self.num_layers):
-            op_name = np.random.choice(avaiable_op_names)
+            op_name = np.random.choice(available_op_names)
             img = self.func[op_name](img, self.level_map[op_name])
         return img
 

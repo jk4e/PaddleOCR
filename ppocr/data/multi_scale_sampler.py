@@ -20,12 +20,12 @@ class MultiScaleSampler(Sampler):
         seed=None,
     ):
         """
-        multi scale samper
+        multi scale sampler
         Args:
             data_source(dataset)
             scales(list): several scales for image resolution
             first_bs(int): batch size for the first scale in scales
-            divided_factor(list[w, h]): ImageNet models down-sample images by a factor, ensure that width and height dimensions are multiples are multiple of devided_factor.
+            divided_factor(list[w, h]): ImageNet models down-sample images by a factor, ensure that width and height dimensions are multiples are multiple of divided_factor.
             is_training(boolean): mode
         """
         # min. and max. spatial dimensions
