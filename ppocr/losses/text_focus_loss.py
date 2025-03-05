@@ -21,10 +21,10 @@ import paddle
 import numpy as np
 import pickle as pkl
 
-standard_alphebet = "-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+standard_alphabet = "-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 standard_dict = {}
-for index in range(len(standard_alphebet)):
-    standard_dict[standard_alphebet[index]] = index
+for index in range(len(standard_alphabet)):
+    standard_dict[standard_alphabet[index]] = index
 
 
 def load_confuse_matrix(confuse_dict_path):
@@ -46,7 +46,7 @@ def load_confuse_matrix(confuse_dict_path):
     # upper_alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     for i in range(63):
         for j in range(63):
-            if i != j and standard_alphebet[j] in lower_alpha:
+            if i != j and standard_alphabet[j] in lower_alpha:
                 rearrange_data[i][j] = max(
                     rearrange_data[i][j], rearrange_data[i][j + 26]
                 )
